@@ -1,0 +1,26 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "aye yo this is my website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tesohh/website.git"
+  },
+  "keywords": [
+    "website",
+    "portfolio"
+  ],
+  "author": "Tesohh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tesohh/website/issues"
+  },
+  "homepage": "https://github.com/Tesohh/website#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
