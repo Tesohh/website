@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="build/tailwind.css" rel="stylesheet" />
+	<title>Simone Tesini</title>
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&family=Lato:ital@0;1&display=swap"
+		rel="stylesheet">
+	<script src="https://kit.fontawesome.com/779069b662.js" crossorigin="anonymous"></script>
+	<script src="/js/script.js"></script>
+
+</head>
+
+<body class="bg-white text-white font-sans">
+	<nav class="flex bg-graybg items-center flex-wrap">
+		<!-- <div class="mx-5"> -->
+		<a href="#">
+			<img src="/img/logo.svg" alt="logo" class="content-center h-10 mx-10 my-5">
+		</a>
+		<button class="p-3 rounded inline-flex ml-auto mx-10 lg:hidden" onclick="
+			const menu = document.getElementById('navigation')
+			menu.classList.toggle('hidden')
+			menu.animate([
+				{ transform: 'translateY(-10%)' },
+				{ transform: 'translateY(0)' }],
+				{ duration: 100, fill: 'forwards' })">
+			<i class="fas fa-bars"></i>
+		</button>
+		<div class="hidden top-nav w-full lg:inline-flex lg:flex-grow lg:w-auto mr-5" id="navigation">
+			<div class="lg:inline-flex lg:flex-row lg:ml-auto flex flex-col">
+				<a href="#"
+					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 rounded hover:bg-primary hover:bg-opacity-30">Giuro</a>
+				<a href="#" class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 rounded hover:bg-primary hover:bg-opacity-30">Bro</a>
+				<a href="#"
+					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 rounded hover:bg-primary hover:bg-opacity-30">Spacchiamo
+					tutto</a>
+			</div>
+			<a class="p-5 lg:hidden"></a>
+		</div>
+		<!-- </div> -->
+		<!-- <div class="float-right"> -->
+
+		<!-- </div> -->
+	</nav>
+	<!-- <div class="">
+
+		<img src="/img/logo.svg" alt="logo" class="content-center">
+		<span id="splashtext" class="text-primary italic font-mono">Splash Text</span>
+		<br>
+		bella bro
+		<script>
+			const splashTexts = ['Hello there', 'Hey', 'Welcome', 'Nice to meet you'];
+			document.getElementById('splashtext').innerText = splashTexts[Math.floor(Math.random() * splashTexts.length)]
+		</script>
+	</div> -->
+
+</body>
+
+</html>
