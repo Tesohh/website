@@ -1,14 +1,23 @@
 {
-  "name": "tailwindtest",
+  "name": "tesohh.dev",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simone Tesini's personal website",
   "main": "tailwind.config.js",
   "scripts": {
     "dev": "vite",
-    "build": "npx tailwindcss-cli build -i build/tailwind.css -o css/tailwind.css"
+    "build-loud": "echo \u001b[32mProcessing css...\u001b[35m && npx tailwindcss-cli build -i build/tailwind.css -o css/tailwind.css && echo \u001b[0m",
+    "build": "npm run --silent build-loud"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "portfolio",
+    "personal",
+    "website",
+    "tailwindcss",
+    "tailwind",
+    "css",
+    "tailwindcss-cli"
+  ],
+  "author": "Simone Tesini",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.1",
