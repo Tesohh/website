@@ -44,44 +44,69 @@
 
 <body class="bg-graybg text-white font-sans">
 	<nav class="flex bg-graybg items-center flex-wrap fixed w-full top-0">
-		<!-- <div class="mx-5"> -->
+		<!-- Logo -->
 		<a href="#">
 			<img src="/img/logo.svg" alt="logo" class="content-center h-10 mx-10 my-5">
 		</a>
-		<button class="p-3 rounded inline-flex ml-auto mx-10 lg:hidden" onclick="
-			const container = document.getElementById('navigation'); 
-			container.classList.toggle('hidden');">
+
+		<!-- Menu Button -->
+		<button class="p-3 inline-flex ml-auto mx-10 lg:hidden" onclick="
+			const menu = document.getElementById('navigation'); 
+			menu.classList.toggle('hidden');
+			// const btn = document.getElementById('mobile-nav-btn');
+			// btn.classList.toggle('fa-bars fa-circle-arrow-down'); 
+			" id="mobile-nav-btn">
 			<i class="fas fa-bars"></i>
 		</button>
-		<div
-			class="hidden top-nav w-full lg:inline-flex lg:flex-grow lg:w-auto mr-5 top-0 overflow-hidden navbar-items font-mono text-secondary"
+
+		<!-- Entries -->
+		<div class="hidden top-nav w-full lg:inline-flex lg:flex-grow lg:w-auto mr-5 font-mono text-secondary"
 			id="navigation">
-			<div class="lg:inline-flex lg:flex-row lg:ml-auto flex flex-col">
+			<div class="lg-inline-flex lg:flex-row lg:ml-auto flex flex-col">
 				<a href="#aboutme"
-					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary"><span
-						class="text-primary">1.</span>
-					About Me</a>
-				<a href="#projects" class="lg-inline-flex lg:w-auto mx-5 px-1 py-1">Bro</a>
-				<a href="#" class="lg-inline-flex lg:w-auto mx-5 px-1 py-1  ">Spacchiamo
-					tutto</a>
+					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
+					<span class="text-primary">1.</span> About Me
+				</a>
+				<a href="#projects"
+					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
+					<span class="text-primary">2.</span> Projects
+				</a>
+				<a href="#knowledge"
+					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
+					<span class="text-primary">3.</span> Skills and education
+				</a>
+				<a href="#contact"
+					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
+					<span class="text-primary">4.</span> Contact
+				</a>
 			</div>
 			<span class="p-5 lg:hidden"></span>
 		</div>
 	</nav>
 
-	<div class="title anim-introduce" id="">
+	<div class="title" id="">
 		<span id="splashtext" class="text-primary italic font-mono splashtext lg:ml-1">Splash Text</span>
 		<h1 class="">Simone Tesini</h1>
-		<h2 class="text-textdim">Developer</h2>
+		<h2 class="text-textdim">and i'm a Developer</h2>
 	</div>
 
-	<div class="footer" id="footer">
+	<div class="" id="aboutme">
+		<h1>About me</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque minus eveniet, facere, non nemo unde
+		obcaecati iusto fugit quod laudantium a quae facilis sit nesciunt. Vitae voluptas quae odit, soluta porro aperiam
+		fuga earum, sint voluptatum maiores quod minus saepe vero corporis laudantium nihil nemo, eligendi qui cum inventore
+		cumque esse! Consectetur minima alias inventore, repudiandae ipsam sequi aperiam qui! Libero, doloremque ipsam
+		tenetur mollitia rem nisi officiis dignissimos ex maiores sequi, natus praesentium odit maxime odio tempore ratione,
+		facere quam rerum sit. Aut excepturi totam suscipit pariatur beatae, voluptate sed animi temporibus vero aspernatur
+		inventore similique laudantium recusandae maiores?
 	</div>
+	<div class="" id="projects">asd</div>
+	<div class="" id="knowledge">asd</div>
+	<div class="" id="contact">asd</div>
 </body>
 
 <!-- Splash text script -->
 <script>
-	const splashTexts = ['Hello there, i\'m', 'Hey, i\'m', 'Welcome, you can call me', 'Nice to meet you', 'Hi, my name is'];
+	const splashTexts = ['Hello there, i\'m', 'Hey, i\'m', 'Welcome, you can call me', 'Nice to meet you, i\'m', 'Hi, my name is'];
 	document.getElementById('splashtext').innerText = splashTexts[Math.floor(Math.random() * splashTexts.length)]
 </script>
 
