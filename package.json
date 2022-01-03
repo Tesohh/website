@@ -5,7 +5,7 @@
   "main": "tailwind.config.js",
   "scripts": {
     "dev": "vite",
-    "build": "npx tailwindcss-cli build -i css/tailwind.css -o build/tailwind.css"
+    "build": "npx tailwindcss-cli build -i build/tailwind.css -o css/tailwind.css"
   },
   "keywords": [],
   "author": "",

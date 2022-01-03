@@ -6,7 +6,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="build/tailwind.css" rel="stylesheet" />
+	<link href="css/tailwind.css" rel="stylesheet" />
+	<link href="css/styles.css" rel="stylesheet" />
 	<title>Simone Tesini</title>
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> -->
@@ -19,22 +20,19 @@
 
 </head>
 
-<body class="bg-white text-white font-sans">
-	<nav class="flex bg-graybg items-center flex-wrap">
+<body class="bg-graybg text-white font-sans">
+	<nav class="flex bg-graybg shadow-lg items-center flex-wrap fixed w-full top-0">
 		<!-- <div class="mx-5"> -->
 		<a href="#">
 			<img src="/img/logo.svg" alt="logo" class="content-center h-10 mx-10 my-5">
 		</a>
 		<button class="p-3 rounded inline-flex ml-auto mx-10 lg:hidden" onclick="
-			const menu = document.getElementById('navigation')
-			menu.classList.toggle('hidden')
-			menu.animate([
-				{ transform: 'translateY(-10%)' },
-				{ transform: 'translateY(0)' }],
-				{ duration: 100, fill: 'forwards' })">
+			const container = document.getElementById('navigation'); 
+			container.classList.toggle('hidden');">
 			<i class="fas fa-bars"></i>
 		</button>
-		<div class="hidden top-nav w-full lg:inline-flex lg:flex-grow lg:w-auto mr-5" id="navigation">
+		<div class="hidden top-nav w-full lg:inline-flex lg:flex-grow lg:w-auto mr-5 top-0 overflow-hidden navbar-items"
+			id="navigation">
 			<div class="lg:inline-flex lg:flex-row lg:ml-auto flex flex-col">
 				<a href="#"
 					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 rounded hover:bg-primary hover:bg-opacity-30">Giuro</a>
@@ -43,25 +41,33 @@
 					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 rounded hover:bg-primary hover:bg-opacity-30">Spacchiamo
 					tutto</a>
 			</div>
-			<a class="p-5 lg:hidden"></a>
+			<span class="p-5 lg:hidden"></span>
 		</div>
-		<!-- </div> -->
-		<!-- <div class="float-right"> -->
-
-		<!-- </div> -->
 	</nav>
-	<!-- <div class="">
 
-		<img src="/img/logo.svg" alt="logo" class="content-center">
-		<span id="splashtext" class="text-primary italic font-mono">Splash Text</span>
-		<br>
-		bella bro
-		<script>
-			const splashTexts = ['Hello there', 'Hey', 'Welcome', 'Nice to meet you'];
-			document.getElementById('splashtext').innerText = splashTexts[Math.floor(Math.random() * splashTexts.length)]
-		</script>
-	</div> -->
+	<div class="title" id="">
+		<span id="splashtext" class="text-primary italic font-mono splashtext lg:ml-1">Splash Text</span>
+		<h1 class="">Simone Tesini</h1>
+		<h2 class="text-textdim">Developer</h2>
+	</div>
 
+	<div class="footer" id="footer">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum neque modi quaerat dicta numquam provident,
+		deserunt temporibus quod ea obcaecati saepe officia nihil cumque? Voluptate doloribus delectus quos soluta!
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, eius. Quasi, unde quam autem asperiores ab provident
+		quae sed iusto, in animi eos, voluptate perferendis? Exercitationem nam nostrum voluptatem assumenda voluptatibus
+		debitis voluptates dolor nihil consequuntur odio repellendus ex, natus quam asperiores eius libero, animi placeat!
+		Quos quidem, a cupiditate eius eveniet rem dolorem laborum itaque tenetur officia sed saepe quas odit praesentium,
+		repudiandae voluptatum aspernatur. Enim sapiente quasi labore veritatis consequatur! Repellendus sit fugit sapiente
+		ipsum fugiat inventore nisi maiores officia vero rem, debitis nostrum ea expedita. Asperiores consequatur iusto
+		soluta ex reprehenderit totam voluptates. Illum tempore quas nihil!
+	</div>
 </body>
+
+<!-- Splash text script -->
+<script>
+	const splashTexts = ['Hello there, i\'m', 'Hey, i\'m', 'Welcome, you can call me', 'Nice to meet you', 'Hi, my name is'];
+	document.getElementById('splashtext').innerText = splashTexts[Math.floor(Math.random() * splashTexts.length)]
+</script>
 
 </html>
