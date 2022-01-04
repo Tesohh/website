@@ -1,7 +1,18 @@
+/* Scrolling behaviour */
 html, body {
 	scroll-behavior: smooth;
 }
+.nav-scroll-magic {
+	transition: top 0.3s;
+}
+.nav-after-scroll {
+	background-color: rgba(34,39,51,0.3);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+  /* -webkit-filter: blur(8px); */
+}
 
+/* Scrollbar */
 body::-webkit-scrollbar {
 	width: 0.5rem;
 }
@@ -15,6 +26,7 @@ body::-webkit-scrollbar-thumb:hover {
 	background: #7f8bb1;
 }
 
+/* Typography */
 h1 {
 	font-size: 6vh;
 	font-weight: 800;
@@ -25,6 +37,7 @@ h2 {
 	/* margin-bottom: .5rem; */
 }
 
+/* Animations */
 .anim-from-above {
 	animation: from-above 1s ease-in-out;
 }
@@ -43,7 +56,6 @@ h2 {
 	animation: fadeIn 1s;
 	animation-fill-mode: forwards;
 }
-
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -56,11 +68,20 @@ h2 {
 	}
 }
 
+/* Components */
+.scrolly {
+	position:absolute;
+	bottom: 10%;
+	left: 50%;
+	color: #4f5666;
+}
+
+/* Pages */
 .title {
-	margin-top: 80px;
+	/* margin-top: 80px; */
 	text-align: center;
 	/* width: 50%; */
-	min-height: 80vh;
+	min-height: 100vh;
 	display: flex;
 	-moz-box-pack: center;
 	justify-content: center;
@@ -69,12 +90,17 @@ h2 {
 	/* align-items: flex-start; */
 	padding: 0px;
 }
+.page {
+	margin-top: 80px;
+	min-height: 100vh;
+}
 
+/* Responsive LG */
 @media screen and (min-width: 1024px) {
 	.title {
-		margin-top: 80px;
+		/* margin-top: 80px; */
 		margin-left: 25vw; 
-		min-height: 80vh;
+		min-height: 100vh;
 		display: flex;
 		-moz-box-pack: center;
 		justify-content: center;
@@ -93,11 +119,3 @@ h2 {
 		/* margin-bottom: .5rem; */
 	}
 }
-	
-
-/* div.navbarcontainer {
-	transition: height 600ms ease;
-}
-div.navbarcontainer:not(.hidden) {
-	height: fit-content;
-} */

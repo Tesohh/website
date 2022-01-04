@@ -7,6 +7,7 @@ module.exports = {
         secondary: "#bbc0c9", // "#a1a5ad",
         textdim: "#4f5666",
         graybg: "#222733",
+        transparentbg: "rgba(34,39,51,0.3)",
         // navbg: "#222733",
       },
       fontFamily: {

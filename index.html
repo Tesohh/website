@@ -1,6 +1,15 @@
+<!--    __                  __    __ -->
+<!--   / /____  _________  / /_  / /_ -->
+<!--  / __/ _ \/ ___/ __ \/ __ \/ __ \ -->
+<!-- / /_/  __(__  ) /_/ / / / / / / / -->
+<!-- \__/\___/____/\____/_/ /_/_/ /_/ -->
+
+<!-- Made by Simone Tesini -->
+<!-- Powered by Tailwind -->
+<!-- Inspired by brittanychiang.com -->
+
 <!DOCTYPE html>
 <html lang="en">
-
 
 <head>
 	<!-- Boilerplate -->
@@ -43,10 +52,10 @@
 </head>
 
 <body class="bg-graybg text-white font-sans">
-	<nav class="flex bg-graybg items-center flex-wrap fixed w-full top-0">
+	<nav class="flex bg-graybg shadow-xl items-center flex-wrap fixed w-full top-0 nav-scroll-magic" id="navbar">
 		<!-- Logo -->
 		<a href="#">
-			<img src="/img/logo.svg" alt="logo" class="content-center h-10 mx-10 my-5">
+			<img src="/img/logo.svg" alt="logo" class="content-center h-10 mx-10 my-5 opacity-100">
 		</a>
 
 		<!-- Menu Button -->
@@ -83,14 +92,18 @@
 			<span class="p-5 lg:hidden"></span>
 		</div>
 	</nav>
+	<!-- Shadow is temporary -->
 
 	<div class="title" id="">
 		<span id="splashtext" class="text-primary italic font-mono splashtext lg:ml-1">Splash Text</span>
 		<h1 class="">Simone Tesini</h1>
 		<h2 class="text-textdim">and i'm a Developer</h2>
+		<a href="#aboutme" class="scrolly animate-bounce">
+			<i class="fas fa-angle-down"></i>
+		</a>
 	</div>
 
-	<div class="" id="aboutme">
+	<div class="page" id="aboutme">
 		<h1>About me</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque minus eveniet, facere, non nemo unde
 		obcaecati iusto fugit quod laudantium a quae facilis sit nesciunt. Vitae voluptas quae odit, soluta porro aperiam
 		fuga earum, sint voluptatum maiores quod minus saepe vero corporis laudantium nihil nemo, eligendi qui cum inventore
@@ -104,10 +117,29 @@
 	<div class="" id="contact">asd</div>
 </body>
 
-<!-- Splash text script -->
 <script>
+	// Splash Text
 	const splashTexts = ['Hello there, i\'m', 'Hey, i\'m', 'Welcome, you can call me', 'Nice to meet you, i\'m', 'Hi, my name is'];
 	document.getElementById('splashtext').innerText = splashTexts[Math.floor(Math.random() * splashTexts.length)]
+
+	// Scroll Magic
+	let prevScrollpos = window.pageYOffset;
+	const navbar = document.getElementById("navbar")
+	const menu = document.getElementById('navigation');
+	window.onscroll = function () {
+		let currentScrollPos = window.pageYOffset;
+		if (prevScrollpos > currentScrollPos) {
+			navbar.style.top = "0";
+			navbar.classList.add('shadow-xl');
+		} else {
+			// Hide the menu
+			navbar.style.top = -navbar.clientHeight + "px";
+			navbar.classList.add("nav-after-scroll")
+			navbar.classList.remove('shadow-xl');
+			menu.classList.contains('hidden') ? null : menu.classList.toggle('hidden');
+		}
+		prevScrollpos = currentScrollPos;
+	} 
 </script>
 
 </html>
