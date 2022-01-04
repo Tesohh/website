@@ -6,7 +6,7 @@
 
 <!-- Made by Simone Tesini -->
 <!-- Powered by Tailwind -->
-<!-- Inspired by brittanychiang.com -->
+<!-- Inspired by brittanychiang.com (not forked) -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,15 +36,14 @@
 	<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<!-- Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&family=Lato:ital@0;1&display=swap"
-		rel="stylesheet">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&family=Lato:ital@0;1&display=swap');
+	</style>
 	<script src="https://kit.fontawesome.com/779069b662.js" crossorigin="anonymous"></script>
 
 	<!-- Styles -->
-	<link href="css/tailwind.css" rel="stylesheet" />
-	<link href="css/styles.css" rel="stylesheet" />
+	<link href="/css/tailwind.css" rel="stylesheet" />
+	<link href="/css/styles.css" rel="stylesheet" />
 
 	<!-- Scripts -->
 	<script src="/js/script.js"></script>
@@ -72,49 +71,57 @@
 		<div class="hidden top-nav w-full lg:inline-flex lg:flex-grow lg:w-auto mr-5 font-mono text-secondary"
 			id="navigation">
 			<div class="lg-inline-flex lg:flex-row lg:ml-auto flex flex-col">
-				<a href="#aboutme"
+				<!-- <a href="#aboutme"
 					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
 					<span class="text-primary">1.</span> About Me
-				</a>
+				</a> -->
 				<a href="#projects"
 					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
-					<span class="text-primary">2.</span> Projects
+					<span class="text-primary">1.</span> Projects
 				</a>
 				<a href="#knowledge"
 					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
-					<span class="text-primary">3.</span> Skills and education
+					<span class="text-primary">2.</span> Skills and education
 				</a>
 				<a href="#contact"
 					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
-					<span class="text-primary">4.</span> Contact
+					<span class="text-primary">3.</span> Contact
 				</a>
 			</div>
 			<span class="p-5 lg:hidden"></span>
 		</div>
 	</nav>
-	<!-- Shadow is temporary -->
 
 	<div class="title" id="">
 		<span id="splashtext" class="text-primary italic font-mono splashtext lg:ml-1">Splash Text</span>
 		<h1 class="">Simone Tesini</h1>
-		<h2 class="text-textdim">and i'm a Developer</h2>
-		<a href="#aboutme" class="scrolly animate-bounce">
+		<h3 class="text-textdim">and i'm a Developer</h3>
+		<a href="#projects" class="scrolly animate-bounce" id="scrolly">
 			<i class="fas fa-angle-down"></i>
 		</a>
 	</div>
 
-	<div class="page" id="aboutme">
-		<h1>About me</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque minus eveniet, facere, non nemo unde
-		obcaecati iusto fugit quod laudantium a quae facilis sit nesciunt. Vitae voluptas quae odit, soluta porro aperiam
-		fuga earum, sint voluptatum maiores quod minus saepe vero corporis laudantium nihil nemo, eligendi qui cum inventore
-		cumque esse! Consectetur minima alias inventore, repudiandae ipsam sequi aperiam qui! Libero, doloremque ipsam
-		tenetur mollitia rem nisi officiis dignissimos ex maiores sequi, natus praesentium odit maxime odio tempore ratione,
-		facere quam rerum sit. Aut excepturi totam suscipit pariatur beatae, voluptate sed animi temporibus vero aspernatur
-		inventore similique laudantium recusandae maiores?
+	<div class="page" id="projects">
+		<h2><span class="text-primary font-mono lg:text-4xl text-2xl">01.</span> Projects</h2>
 	</div>
-	<div class="" id="projects">asd</div>
-	<div class="" id="knowledge">asd</div>
-	<div class="" id="contact">asd</div>
+	<div class="" id="knowledge"></div>
+	<div class="" id="contact"></div>
+	<div id="footer" class="flex flex-col items-center mt-10 mb-5 font-mono text-sm">
+		<div class="hidden flex flex-col items-center" id="easter-egg">
+			<img src="/img/filvi.gif" class="animate-bounce">
+			<h2 class="animate-spin text-purple-700">Ay you found it</h2>
+			<h2 class="animate-ping text-blue-700">Yoooo</h2>
+			<h2 class="animate-bounce text-green-700">GG</h2>
+			<h2 class="animate-spin text-red-700">Less gooo</h2>
+		</div>
+		<img src="/img/break.svg" alt="monochrome logo" class="content-center h-10 mx-10 mt-5 mb-2">
+		<a href="https://github.com/Tesohh/website" class="mb-2 hover:text-primary hover:underline"><i
+				class="fab fa-github"></i> Tesohh/website</a>
+		<span class="text-xs">There is an <a
+				href="https://h7j5t5b4.rocketcdn.me/wp-content/uploads/2021/09/Konami-Logo-768x432.jpg"
+				class="text-primary hover:underline italic">easter
+				egg</a></span>
+	</div>
 </body>
 
 <script>
@@ -126,6 +133,7 @@
 	let prevScrollpos = window.pageYOffset;
 	const navbar = document.getElementById("navbar")
 	const menu = document.getElementById('navigation');
+	const scrolly = document.getElementById('scrolly');
 	window.onscroll = function () {
 		let currentScrollPos = window.pageYOffset;
 		if (prevScrollpos > currentScrollPos) {
@@ -136,6 +144,8 @@
 			navbar.style.top = -navbar.clientHeight + "px";
 			navbar.classList.add("nav-after-scroll")
 			navbar.classList.remove('shadow-xl');
+			scrolly.classList.remove('animate-bounce');
+			scrolly.classList.add('hidden');
 			menu.classList.contains('hidden') ? null : menu.classList.toggle('hidden');
 		}
 		prevScrollpos = currentScrollPos;

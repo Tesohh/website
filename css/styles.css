@@ -1,6 +1,9 @@
 /* Scrolling behaviour */
 html, body {
 	scroll-behavior: smooth;
+	scrollbar-width: thin;
+	scrollbar-color: #353a4b #232733;
+	/* scrollbar-gutter: none; */
 }
 .nav-scroll-magic {
 	transition: top 0.3s;
@@ -23,16 +26,30 @@ body::-webkit-scrollbar-thumb {
 	background: #353a4b;
 }
 body::-webkit-scrollbar-thumb:hover {
-	background: #7f8bb1;
+	background: #454a5b;
+}
+
+/* Custom Select */
+::-moz-selection {
+	background: #00cc94;
+	color: #fff;
+}
+::selection {
+	background: #00cc94;
+	color: #fff;
 }
 
 /* Typography */
 h1 {
 	font-size: 6vh;
-	font-weight: 800;
+	font-weight: 900;
 	/* margin-bottom: .5rem; */
 }
 h2 {
+	font-size: 5vh;
+	/* margin-bottom: .5rem; */
+}
+h3 {
 	font-size: 4vh;
 	/* margin-bottom: .5rem; */
 }
@@ -90,9 +107,30 @@ h2 {
 	/* align-items: flex-start; */
 	padding: 0px;
 }
+
 .page {
-	margin-top: 80px;
-	min-height: 100vh;
+	text-align: center;
+	/* width: 50%; */
+	/* min-height: 100vh; */
+	display: flex;
+	-moz-box-pack: center;
+	justify-content: center;
+	-moz-box-align: center;
+	flex-direction: column;
+	/* align-items: flex-start; */
+	padding: 0px;
+}
+.page-reverse {
+	text-align: center;
+	/* width: 50%; */
+	/* min-height: 100vh; */
+	display: flex;
+	-moz-box-pack: center;
+	justify-content: center;
+	-moz-box-align: center;
+	flex-direction: column;
+	/* align-items: flex-start; */
+	padding: 0px;
 }
 
 /* Responsive LG */
@@ -109,12 +147,40 @@ h2 {
 		align-items: flex-start;
 		padding: 0px;
 	}
+	.page {
+		/* margin-top: 80px; */
+		margin-left: 25vw; 
+		/* min-height: 100vh; */
+		display: flex;
+		-moz-box-pack: center;
+		justify-content: center;
+		-moz-box-align: center;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0px;
+	}
+	.page-reverse {
+		/* margin-top: 80px; */
+		margin-right: 25vw; 
+		min-height: 100vh;
+		display: flex;
+		-moz-box-pack: center;
+		justify-content: center;
+		-moz-box-align: center;
+		flex-direction: column;
+		align-items: flex-end;
+		padding: 0px;
+	}
 	h1 {
 		font-size: 10vh;
-		font-weight: 800;
+		font-weight: 900;
 		/* margin-bottom: .5rem; */
 	}
 	h2 {
+		font-size: 8vh;
+		/* margin-bottom: .5rem; */
+	}
+	h3 {
 		font-size: 6vh;
 		/* margin-bottom: .5rem; */
 	}

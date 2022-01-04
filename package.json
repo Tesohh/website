@@ -5,8 +5,8 @@
   "main": "tailwind.config.js",
   "scripts": {
     "dev": "vite",
-    "build-loud": "echo \u001b[32mProcessing css...\u001b[35m && npx tailwindcss-cli build -i build/tailwind.css -o css/tailwind.css && echo \u001b[0m",
-    "build": "npm run --silent build-loud"
+    "build": "npx tailwindcss-cli build -i build/tailwind.css -o css/tailwind.css",
+    "buildmin": "npx tailwindcss-cli build -i build/tailwind.css -o css/tailwind.min.css --minify"
   },
   "keywords": [
     "portfolio",
