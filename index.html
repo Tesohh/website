@@ -58,7 +58,7 @@
 		</a>
 
 		<!-- Menu Button -->
-		<button class="p-3 inline-flex ml-auto mx-10 lg:hidden" onclick="
+		<button class="p-3 inline-flex ml-auto mx-10 md:hidden" onclick="
 			const menu = document.getElementById('navigation'); 
 			menu.classList.toggle('hidden');
 			// const btn = document.getElementById('mobile-nav-btn');
@@ -68,32 +68,32 @@
 		</button>
 
 		<!-- Entries -->
-		<div class="hidden top-nav w-full lg:inline-flex lg:flex-grow lg:w-auto mr-5 font-mono text-secondary"
+		<div class="hidden top-nav w-full md:inline-flex md:flex-grow md:w-auto mr-5 font-mono text-secondary"
 			id="navigation">
-			<div class="lg-inline-flex lg:flex-row lg:ml-auto flex flex-col">
+			<div class="md-inline-flex md:flex-row md:ml-auto flex flex-col">
 				<!-- <a href="#aboutme"
-					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
+					class="md-inline-flex md:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
 					<span class="text-primary">1.</span> About Me
 				</a> -->
 				<a href="#projects"
-					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
+					class="md-inline-flex md:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
 					<span class="text-primary">1.</span> Projects
 				</a>
 				<a href="#knowledge"
-					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
+					class="md-inline-flex md:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
 					<span class="text-primary">2.</span> Skills and education
 				</a>
 				<a href="#contact"
-					class="lg-inline-flex lg:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
+					class="md-inline-flex md:w-auto mx-5 px-1 py-1 hover:underline hover:font-bold hover:text-primary">
 					<span class="text-primary">3.</span> Contact
 				</a>
 			</div>
-			<span class="p-5 lg:hidden"></span>
+			<span class="p-5 md:hidden"></span>
 		</div>
 	</nav>
 
 	<div class="title" id="">
-		<span id="splashtext" class="text-primary italic font-mono splashtext lg:ml-1">Splash Text</span>
+		<span id="splashtext" class="text-primary italic font-mono splashtext md:ml-1">Splash Text</span>
 		<h1 class="">Simone Tesini</h1>
 		<h3 class="text-textdim">and i'm a Developer</h3>
 		<a href="#projects" class="scrolly animate-bounce" id="scrolly">
@@ -101,11 +101,61 @@
 		</a>
 	</div>
 
-	<div class="page" id="projects">
-		<h2><span class="text-primary font-mono lg:text-4xl text-2xl">01.</span> Projects</h2>
+	<div class="flex flex-col items-center" id="projects">
+		<h2><span class="text-primary font-mono md:text-4xl text-2xl">01.</span> Projects</h2>
+		<!-- Cards -->
+		<div class="flex flex-col md:flex-row gap-6 mt-6">
+			<!-- VCity -->
+			<div class="max-w-xs rounded overflow-hidden shadow-2xl">
+				<img src="/img/placeholders/capybaras.png" class="w-full">
+				<!-- Text Box -->
+				<div class="px-6 py-4">
+					<!-- Title -->
+					<div class="font-bold text-xl mb-1">
+						VCity
+					</div>
+					<!-- description and icons -->
+					<div class="flex flex-row gap-3">
+						<p>Discord MMORPG with multiplayer, quests, skills and much more!</p>
+						<!-- Built with icons -->
+						<div class="flex flex-col-reverse items-center gap-2 text-xl">
+							<a class="fab fa-node-js text-2xl" alt="Node.js" href="https://nodejs.org"></a>
+							<a class="fab fa-discord" alt="Discord.js" href="https://discord.js.org"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- pyros -->
+			<div class="max-w-xs rounded overflow-hidden shadow-2xl">
+				<img src="/img/placeholders/capybaras.png" class="w-full">
+				<!-- Text Box -->
+				<div class="px-6 py-4">
+					<!-- Title -->
+					<div class="font-bold text-xl mb-1">
+						pyros.dev
+					</div>
+					<!-- description and icons -->
+					<div class="flex flex-row gap-3">
+						<p>The website of Pyros, a "company" that i run with my friend Mat.</p>
+						<!-- Built with icons -->
+						<div class="flex flex-col-reverse items-center gap-2 text-xl">
+							<a>
+								<!-- TODO immagine -->
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="" id="knowledge"></div>
-	<div class="" id="contact"></div>
+	<div class="flex flex-col items-center mt-10" id="contact">
+		<h2><span class="text-primary font-mono md:text-4xl text-2xl">03.</span> Contact me</h2>
+		<button class="bg-primary rounded-md py-3 px-5 text-black">
+			<a href="mailto:simozilla006@gmail.com">Email</a>
+		</button>
+		<p class="m-1 text-textdim text-xs">You can also contact me through my social media</p>
+	</div>
 	<div id="footer" class="flex flex-col items-center mt-10 mb-5 font-mono text-sm">
 		<div class="hidden flex flex-col items-center" id="easter-egg">
 			<img src="/img/filvi.gif" class="animate-bounce">
